@@ -1,3 +1,7 @@
+/**
+ * Author: R-CO
+ * E-mail: daniel1820kobe@gmail.com
+ **/
 #include "1_two_sum.hpp"
 
 #include <gtest/gtest.h>

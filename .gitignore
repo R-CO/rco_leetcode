@@ -31,3 +31,10 @@
 *.out
 *.app
 build/
+
+# .xmake
+.xmake/
+
+# .vscode
+.vscode/
+

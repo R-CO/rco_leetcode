@@ -1,3 +1,7 @@
+/**
+ * Author: R-CO
+ * E-mail: daniel1820kobe@gmail.com
+ **/
 #include "70_climbing_stairs.hpp"
 
 #include <gtest/gtest.h>

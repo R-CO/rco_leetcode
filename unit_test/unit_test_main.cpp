@@ -1,3 +1,7 @@
+/**
+ * Author: R-CO
+ * E-mail: daniel1820kobe@gmail.com
+ **/
 #include <gtest/gtest.h>
 
 #include <cstdlib>
