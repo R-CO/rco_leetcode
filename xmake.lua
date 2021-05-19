@@ -36,6 +36,13 @@ target("1")
 	add_files("src/easy/1_two_sum_test.cpp")
 target_end()
 
+target("70")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/70_climbing_stairs_test.cpp")
+target_end()
+
 target("110")
 	set_kind("binary")
 
