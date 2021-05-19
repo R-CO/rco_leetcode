@@ -49,3 +49,10 @@ target("110")
 	add_files("unit_test/unit_test_main.cpp")
 	add_files("src/easy/110_balanced_binary_tree_test.cpp")
 target_end()
+
+target("509")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/509_fibonacci_number_test.cpp")
+target_end()
