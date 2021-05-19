@@ -13,7 +13,7 @@ class BinaryTree {
  public:
   BinaryTree(int arry[], const size_t arr_size, const int null_val)
       : root(nullptr), null_val_(null_val) {
-    root = insertLevelOrder(arry, arr_size, root, 0);
+    root = insertLevelOrder(arry, static_cast<int>(arr_size), root, 0);
   }
 
   ~BinaryTree() { releaseTree(root); }
@@ -22,39 +22,39 @@ class BinaryTree {
 
  private:
   // Function to insert nodes in level order
-  TreeNode* insertLevelOrder(int arry[], int arr_size, TreeNode* root, int i) {
+  TreeNode* insertLevelOrder(int arry[], int arr_size, TreeNode* node, int i) {
     if (arry[i] == null_val_) {
-      return root;
+      return node;
     }
 
     // Base case for recursion
     if (i < arr_size) {
       TreeNode* temp = new TreeNode(arry[i]);
-      root = temp;
+      node = temp;
 
       // insert left child
-      root->left = insertLevelOrder(arry, arr_size, root->left, 2 * i + 1);
+      node->left = insertLevelOrder(arry, arr_size, node->left, 2 * i + 1);
 
       // insert right child
-      root->right = insertLevelOrder(arry, arr_size, root->right, 2 * i + 2);
+      node->right = insertLevelOrder(arry, arr_size, node->right, 2 * i + 2);
     }
-    return root;
+    return node;
   }
 
-  void releaseTree(TreeNode* root) {
-    if (root == nullptr) {
+  void releaseTree(TreeNode* node) {
+    if (node == nullptr) {
       return;
     }
 
-    if (root->left != nullptr) {
-      releaseTree(root->left);
+    if (node->left != nullptr) {
+      releaseTree(node->left);
     }
 
-    if (root->right != nullptr) {
-      releaseTree(root->right);
+    if (node->right != nullptr) {
+      releaseTree(node->right);
     }
 
-    delete root;
+    delete node;
   }
 
   const int null_val_;
