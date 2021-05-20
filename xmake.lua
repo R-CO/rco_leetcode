@@ -1,6 +1,13 @@
+--[[
+/**
+ * Author: R-CO
+ * E-mail: daniel1820kobe@gmail.com
+ **/
+]]
 set_languages("c11", "cxx17")
 if is_mode("debug") then
 	set_symbols("debug")
+	add_cxxflags("-O0")
 else
 	add_cxxflags("-O2")
 end
@@ -29,6 +36,7 @@ target("test_template")
 	add_files("src/test_template.cpp")
 target_end()
 
+-- 1. Two Sum
 target("1")
 	set_kind("binary")
 
@@ -36,6 +44,7 @@ target("1")
 	add_files("src/easy/1_two_sum_test.cpp")
 target_end()
 
+-- 70. Climbing Stairs
 target("70")
 	set_kind("binary")
 
@@ -43,6 +52,7 @@ target("70")
 	add_files("src/easy/70_climbing_stairs_test.cpp")
 target_end()
 
+-- 110. Balanced Binary Tree
 target("110")
 	set_kind("binary")
 
@@ -50,9 +60,18 @@ target("110")
 	add_files("src/easy/110_balanced_binary_tree_test.cpp")
 target_end()
 
+-- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
 
 	add_files("unit_test/unit_test_main.cpp")
 	add_files("src/easy/509_fibonacci_number_test.cpp")
+target_end()
+
+-- 1170. N-th Tribonacci Number
+target("1170")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/1170_n_th_tribonacci_number_test.cpp")
 target_end()
