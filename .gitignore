@@ -38,3 +38,6 @@ build/
 # .vscode
 .vscode/
 
+# cppcheck
+cppcheck/rco_leetcode-cppcheck-build-dir/
+
