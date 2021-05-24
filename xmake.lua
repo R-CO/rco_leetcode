@@ -68,6 +68,14 @@ target("509")
 	add_files("src/easy/509_fibonacci_number_test.cpp")
 target_end()
 
+-- 746. Min Cost Climbing Stairs
+target("746")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/746_min_cost_climbing_stairs_test.cpp")
+target_end()
+
 -- 1170. N-th Tribonacci Number
 target("1170")
 	set_kind("binary")
