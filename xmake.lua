@@ -76,6 +76,14 @@ target("746")
 	add_files("src/easy/746_min_cost_climbing_stairs_test.cpp")
 target_end()
 
+-- 838. Push Dominoes
+target("838")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/838_push_dominoes_test.cpp")
+target_end()
+
 -- 1170. N-th Tribonacci Number
 target("1170")
 	set_kind("binary")
