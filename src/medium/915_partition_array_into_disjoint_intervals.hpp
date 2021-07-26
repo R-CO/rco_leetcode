@@ -28,11 +28,11 @@ class Solution {
         ++(it->second);
       }
     }
+    auto current_right_map_min_it = right_map.begin();
 
     auto it = nums.begin();
     ++it;
     for (; it != nums.end(); ++it) {
-      const auto& current_right_map_min_it = right_map.begin();
       if (left_max <= current_right_map_min_it->first) {
         break;
       }
@@ -43,8 +43,8 @@ class Solution {
       }
 
       --right_map[*it];
-      if (right_map[*it] == 0) {
-        right_map.erase(*it);
+      while (current_right_map_min_it->second == 0) {
+        ++current_right_map_min_it;
       }
     }
 
