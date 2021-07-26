@@ -60,6 +60,14 @@ target("110")
 	add_files("src/easy/110_balanced_binary_tree_test.cpp")
 target_end()
 
+-- 162. Find Peak Element
+target("162")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/162_find_peak_element_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
