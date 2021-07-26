@@ -20,50 +20,46 @@ struct test_case {
 class Solution {
  public:
   string pushDominoes(string dominoes) {
-    dominoes_count_ = static_cast<int>(dominoes.size());
-    return nextSecond(dominoes, false);
-  }
+    const int dominoes_count_ = static_cast<int>(dominoes.size());
+    string next_second_dominoes(dominoes);
+    bool stop = false;
 
- private:
-  string nextSecond(string dominoes, bool stop) {
-    if (stop) {
-      return dominoes;
-    }
+    while (!stop) {
+      stop = true;
 
-    stop = true;
-    auto next_second_dominoes = dominoes;
-    for (int i = 0; i < dominoes_count_; ++i) {
-      if (dominoes[i] == 'R' && (i + 1) < dominoes_count_) {
-        if (dominoes[i + 1] == '.') {
-          if ((i + 2) < dominoes_count_) {
-            if (dominoes[i + 2] != 'L') {
+      for (int i = 0; i < dominoes_count_; ++i) {
+        if (dominoes[i] == 'R' && (i + 1) < dominoes_count_) {
+          if (dominoes[i + 1] == '.') {
+            if ((i + 2) < dominoes_count_) {
+              if (dominoes[i + 2] != 'L') {
+                next_second_dominoes[i + 1] = 'R';
+                stop = false;
+              }
+            } else {
               next_second_dominoes[i + 1] = 'R';
               stop = false;
             }
-          } else {
-            next_second_dominoes[i + 1] = 'R';
-            stop = false;
           }
-        }
-      } else if (dominoes[i] == 'L' && (i - 1) >= 0) {
-        if (dominoes[i - 1] == '.') {
-          if ((i - 2) >= 0) {
-            if (dominoes[i - 2] != 'R') {
+        } else if (dominoes[i] == 'L' && (i - 1) >= 0) {
+          if (dominoes[i - 1] == '.') {
+            if ((i - 2) >= 0) {
+              if (dominoes[i - 2] != 'R') {
+                next_second_dominoes[i - 1] = 'L';
+                stop = false;
+              }
+            } else {
               next_second_dominoes[i - 1] = 'L';
               stop = false;
             }
-          } else {
-            next_second_dominoes[i - 1] = 'L';
-            stop = false;
           }
         }
       }
+
+      dominoes = next_second_dominoes;
     }
 
-    return nextSecond(next_second_dominoes, stop);
+    return dominoes;
   }
-
-  int dominoes_count_ = 0;
 };
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_838_PUSH_DOMINOES_HPP
