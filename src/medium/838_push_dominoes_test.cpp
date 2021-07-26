@@ -56,3 +56,11 @@ TEST(PushDominoes, case_6) {
   Solution solution;
   EXPECT_EQ(solution.pushDominoes(input), expected_out);
 }
+
+TEST(PushDominoes, case_7) {
+  const string input = "R.R...L";
+  const string expected_out = "RRRR.LL";
+
+  Solution solution;
+  EXPECT_EQ(solution.pushDominoes(input), expected_out);
+}

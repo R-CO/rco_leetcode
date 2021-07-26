@@ -5,17 +5,14 @@
 #ifndef RCO_LEETCODE_SRC_MEDIUM_838_PUSH_DOMINOES_HPP
 #define RCO_LEETCODE_SRC_MEDIUM_838_PUSH_DOMINOES_HPP
 
-#include <cstdlib>
-#include <iostream>
 #include <string>
+using std::string;
 #include <vector>
+using std::vector;
 
-using namespace std;
+#define BRUTE_FORCE 0
 
-struct test_case {
-  string input;
-  string expected_output;
-};
+#if BRUTE_FORCE
 
 class Solution {
  public:
@@ -61,5 +58,61 @@ class Solution {
     return dominoes;
   }
 };
+
+#else  // Not BRUTE_FORCE
+
+class Solution {
+ public:
+  string pushDominoes(string dominoes) {
+    const size_t dominoes_count = dominoes.size();
+    vector<int> force_vector(dominoes_count, 0);
+
+    const int force_max = static_cast<int>(dominoes_count);
+
+    int force = 0;
+    auto force_vector_it = force_vector.begin();
+    for (auto it = dominoes.begin(); it != dominoes.end(); ++it) {
+      if (*it == 'R') {
+        force = force_max;
+      } else if (*it == 'L') {
+        force = 0;
+      } else {
+        if (force != 0) {
+          --force;
+        }
+      }
+      *force_vector_it++ += force;
+    }
+
+    force = 0;
+    auto force_vector_reverse_it = force_vector.rbegin();
+    for (auto it = dominoes.rbegin(); it != dominoes.rend(); ++it) {
+      if (*it == 'L') {
+        force = force_max;
+      } else if (*it == 'R') {
+        force = 0;
+      } else {
+        if (force != 0) {
+          --force;
+        }
+      }
+      *force_vector_reverse_it++ -= force;
+    }
+
+    for (size_t i = 0; i < dominoes_count; ++i) {
+      if (force_vector[i] > 0) {
+        dominoes[i] = 'R';
+      } else if (force_vector[i] == 0) {
+        dominoes[i] = '.';
+      } else {
+        dominoes[i] = 'L';
+      }
+    }
+
+    return dominoes;
+  }
+};
+
+#endif
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_838_PUSH_DOMINOES_HPP
