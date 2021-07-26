@@ -32,3 +32,11 @@ TEST(PartitionArrayIntoDisjointIntervals, case_3) {
   Solution solution;
   EXPECT_EQ(solution.partitionDisjoint(input), expected_out);
 }
+
+TEST(PartitionArrayIntoDisjointIntervals, case_4) {
+  vector<int> input = {32, 57, 24, 19, 0, 24, 49, 67, 87, 87};
+  const int expected_out = 7;
+
+  Solution solution;
+  EXPECT_EQ(solution.partitionDisjoint(input), expected_out);
+}

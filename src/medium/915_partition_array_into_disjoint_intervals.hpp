@@ -5,35 +5,25 @@
 #ifndef RCO_LEETCODE_SRC_MEDIUM_915_PARTITION_ARRAY_INTO_DISJOINT_INTERVALS_HPP
 #define RCO_LEETCODE_SRC_MEDIUM_915_PARTITION_ARRAY_INTO_DISJOINT_INTERVALS_HPP
 
-#include <map>
-using std::map;
-using std::pair;
+#include <algorithm>
 #include <vector>
 using std::vector;
 
 class Solution {
  public:
   int partitionDisjoint(vector<int>& nums) {
-    int left_count = 1;
-    int left_max = nums[0];
-    map<int, int> right_map;
-
-    // build-up right_map
-    for (size_t i = static_cast<int>(left_count); i < nums.size(); ++i) {
-      auto num = nums[i];
-      auto it = right_map.find(num);
-      if (it == right_map.end()) {
-        right_map.insert(pair<int, int>(num, 1));
-      } else {
-        ++(it->second);
-      }
+    vector<int> right_min(nums.size(), kMaxNum);
+    right_min[nums.size() - 1] = nums[nums.size() - 1];
+    for (int i = static_cast<int>(nums.size() - 2); i >= 0; --i) {
+      right_min[i] = std::min(nums[i], right_min[i + 1]);
     }
-    auto current_right_map_min_it = right_map.begin();
 
-    auto it = nums.begin();
-    ++it;
+    int left_max = nums[0];
+    int left_count = 1;
+    auto right_min_it = ++(right_min.begin());
+    auto it = ++(nums.begin());
     for (; it != nums.end(); ++it) {
-      if (left_max <= current_right_map_min_it->first) {
+      if (left_max <= *right_min_it) {
         break;
       }
 
@@ -42,10 +32,7 @@ class Solution {
         left_max = *it;
       }
 
-      --right_map[*it];
-      while (current_right_map_min_it->second == 0) {
-        ++current_right_map_min_it;
-      }
+      ++right_min_it;
     }
 
     if (static_cast<size_t>(left_count) == nums.size()) {
@@ -54,6 +41,9 @@ class Solution {
 
     return left_count;
   }
+
+ private:
+  const int kMaxNum = 1000000;
 };
 
 #endif  // end of define
