@@ -68,6 +68,14 @@ target("162")
 	add_files("src/medium/162_find_peak_element_test.cpp")
 target_end()
 
+-- 198. House Robber
+target("198")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/198_house_robber_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
