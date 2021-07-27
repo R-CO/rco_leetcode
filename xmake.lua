@@ -76,6 +76,14 @@ target("198")
 	add_files("src/medium/198_house_robber_test.cpp")
 target_end()
 
+-- 213. House Robber II
+target("213")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/213_house_robber_ii_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
