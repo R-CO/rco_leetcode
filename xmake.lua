@@ -108,6 +108,14 @@ target("838")
 	add_files("src/medium/838_push_dominoes_test.cpp")
 target_end()
 
+-- 852. Peak Index in a Mountain Array
+target("852")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/852_peak_index_in_a_mountain_array_test.cpp")
+target_end()
+
 -- 915. Partition Array into Disjoint Intervals
 target("915")
 	set_kind("binary")
