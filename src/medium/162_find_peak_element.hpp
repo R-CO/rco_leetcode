@@ -15,12 +15,11 @@ class Solution {
 
     bool is_found = false;
     int left_slope = 1;
-    int right_slope = 0;
 
     int upper_bound = static_cast<int>(nums.size()) - 1;
     int i = 0;
     for (i = 0; i < upper_bound; ++i) {
-      right_slope = nums[i + 1] - nums[i];
+      int right_slope = nums[i + 1] - nums[i];
       if (left_slope > 0 && right_slope < 0) {
         peak_index = i;
         is_found = true;
@@ -32,7 +31,6 @@ class Solution {
 
     if (!is_found && i == upper_bound) {
       peak_index = upper_bound;
-      is_found = true;
     }
 
     return peak_index;
