@@ -10,6 +10,8 @@ using std::string;
 #include <vector>
 using std::vector;
 
+namespace push_dominoes {
+
 #define BRUTE_FORCE 0
 
 #if BRUTE_FORCE
@@ -114,5 +116,7 @@ class Solution {
 };
 
 #endif
+
+} // end of namespace push_dominoes
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_838_PUSH_DOMINOES_HPP

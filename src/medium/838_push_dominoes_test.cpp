@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "838_push_dominoes.hpp"
+using namespace push_dominoes;
 
 #include <gtest/gtest.h>
 

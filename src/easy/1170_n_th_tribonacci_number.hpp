@@ -7,6 +7,7 @@
 
 #include <array>
 
+namespace n_th_fibonacci_number {
 class Solution {
  public:
   int tribonacci(int n) {
@@ -26,5 +27,7 @@ class Solution {
 
   static constexpr int kMaxN = 37;
 };
+
+} // end of namespace n_th_fibonacci_number
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_1170_N_TH_FIBONACCI_NUMBER_HPP

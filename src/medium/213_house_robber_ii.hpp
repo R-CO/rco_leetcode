@@ -9,6 +9,8 @@
 
 #include <vector>
 
+namespace house_robber_ii {
+
 class Solution {
 public:
     int rob(std::vector<int>& nums) {
@@ -29,5 +31,7 @@ public:
         return std::max(type1[nums.size()], type2[nums.size()]);
     }
 };
+
+} // end of namespace house_robber_ii
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_213_HOUSE_ROBBER_II_HPP

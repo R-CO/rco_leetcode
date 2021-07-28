@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "1170_n_th_tribonacci_number.hpp"
+using namespace n_th_fibonacci_number;
 
 #include <gtest/gtest.h>
 

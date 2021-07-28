@@ -7,6 +7,7 @@
 
 #include <vector>
 
+namespace peak_index_in_a_mountain_array {
 class Solution {
  public:
   int peakIndexInMountainArray(std::vector<int>& arr) {
@@ -33,5 +34,7 @@ class Solution {
     return peak_index;
   }
 };
+
+} // end of namespace peak_index_in_a_mountain_array
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_852_PEAK_INDEX_IN_A_MOUNTAIN_ARRAY_HPP

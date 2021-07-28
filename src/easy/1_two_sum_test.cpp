@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "1_two_sum.hpp"
+using namespace two_sum;
 
 #include <gtest/gtest.h>
 

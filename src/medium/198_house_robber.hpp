@@ -9,6 +9,7 @@
 
 #include <vector>
 
+namespace house_robber {
 class Solution {
 public:
   int rob(std::vector<int> &nums) {
@@ -31,5 +32,7 @@ public:
     return max_sum[size];
   }
 };
+
+} // end of namespace house_robber
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_198_HOUSE_ROBBER_HPP

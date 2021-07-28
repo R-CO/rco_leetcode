@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "213_house_robber_ii.hpp"
+using namespace house_robber_ii;
 
 #include <gtest/gtest.h>
 

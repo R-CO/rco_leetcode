@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "70_climbing_stairs.hpp"
+using namespace climbing_stairs;
 
 #include <gtest/gtest.h>
 

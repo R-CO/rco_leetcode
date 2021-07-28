@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "852_peak_index_in_a_mountain_array.hpp"
+using namespace peak_index_in_a_mountain_array;
 
 #include <gtest/gtest.h>
 

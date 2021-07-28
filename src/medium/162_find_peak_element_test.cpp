@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "162_find_peak_element.hpp"
+using namespace find_peak_element;
 
 #include <gtest/gtest.h>
 

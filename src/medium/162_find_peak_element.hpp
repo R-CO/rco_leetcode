@@ -7,6 +7,7 @@
 
 #include <vector>
 
+namespace find_peak_element {
 class Solution {
  public:
   int findPeakElement(std::vector<int>& nums) {
@@ -37,5 +38,7 @@ class Solution {
     return peak_index;
   }
 };
+
+} // end of namespace find_peak_element
 
 #endif  // end of define RCO_LEETCODE_SRC_MEDIUM_162_FIND_PEAK_ELEMENT_HPP

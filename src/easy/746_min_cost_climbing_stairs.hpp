@@ -9,6 +9,7 @@
 #include <array>
 #include <vector>
 
+namespace min_cost_climbing_stairs {
 class Solution {
  public:
   int minCostClimbingStairs(std::vector<int>& cost) {
@@ -27,5 +28,7 @@ class Solution {
 
   static constexpr size_t kMaxCostLength = 1000;
 };
+
+} // end of namespace min_cost_climbing_stairs
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_746_MIN_COST_CLIMBING_STAIRS_HPP

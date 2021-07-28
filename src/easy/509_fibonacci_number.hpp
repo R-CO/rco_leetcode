@@ -7,6 +7,7 @@
 
 #include <array>
 
+namespace fibonacci_number {
 class Solution {
  public:
   int fib(int n) {
@@ -24,5 +25,7 @@ class Solution {
 
   static constexpr int kMaxN = 45;
 };
+
+} // end of namespace fibonacci_number
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_509_FIBONACCI_NUMBER_HPP
