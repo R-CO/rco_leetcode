@@ -60,6 +60,14 @@ target("110")
 	add_files("src/easy/110_balanced_binary_tree_test.cpp")
 target_end()
 
+-- 134. Gas Station
+target("134")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/134_gas_station_test.cpp")
+target_end()
+
 -- 162. Find Peak Element
 target("162")
 	set_kind("binary")
