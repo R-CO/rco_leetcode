@@ -8,6 +8,10 @@
 #include <vector>
 
 namespace gas_station {
+
+#define BRUTE_FORCE 0
+
+#if BRUTE_FORCE
 class Solution {
  public:
   int canCompleteCircuit(std::vector<int>& gas, std::vector<int>& cost) {
@@ -44,6 +48,34 @@ class Solution {
     return answer;
   }
 };
+
+#else
+
+class Solution {
+ public:
+  int canCompleteCircuit(std::vector<int>& gas, std::vector<int>& cost) {
+    int begin_index = 0;
+    int sum = 0;
+    int remainder = 0;
+
+    for (size_t i = 0; i < gas.size(); ++i) {
+      sum += gas[i] - cost[i];
+      if (sum < 0) {
+        begin_index = static_cast<int>(i) + 1;
+        remainder += sum;
+        sum = 0;
+      }
+    }
+
+    if (sum + remainder < 0) {
+      begin_index = -1;
+    }
+
+    return begin_index;
+  }
+};
+
+#endif
 
 }  // end of namespace gas_station
 
