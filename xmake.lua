@@ -92,6 +92,14 @@ target("213")
 	add_files("src/medium/213_house_robber_ii_test.cpp")
 target_end()
 
+-- 322. Coin Change
+target("322")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/322_coin_change_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
