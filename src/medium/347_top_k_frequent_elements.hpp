@@ -13,24 +13,14 @@ class Solution {
  public:
   std::vector<int> topKFrequent(std::vector<int> &nums, int k) {
     std::map<int, int> num_count;
-
     for (auto num : nums) {
-      auto it = num_count.find(num);
-      if (it != num_count.end()) {
-        ++(it->second);
-      } else {
-        num_count.insert(std::pair<int, int>(num, 1));
-      }
+      ++num_count[num];
     }
 
     std::map<int, std::vector<int>> frequent_map;
     for (auto num_count_pair : num_count) {
-      const auto &it = frequent_map.find(num_count_pair.second);
-      if (it != frequent_map.end()) {
-        it->second.push_back(num_count_pair.first);
-      } else {
-        frequent_map[num_count[num_count_pair.first]] = {num_count_pair.first};
-      }
+      frequent_map[num_count[num_count_pair.first]].push_back(
+          num_count_pair.first);
     }
 
     std::vector<int> output;
@@ -46,9 +36,6 @@ class Solution {
 
     return output;
   }
-
- private:
-  static constexpr size_t MAX_NUMS_ = 100000;
 };
 
 }  // end of namespace top_k_frequent_elements
