@@ -100,6 +100,14 @@ target("322")
 	add_files("src/medium/322_coin_change_test.cpp")
 target_end()
 
+-- 347. Top K Frequent Elements
+target("347")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/347_top_k_frequent_elements_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
