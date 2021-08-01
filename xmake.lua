@@ -44,6 +44,14 @@ target("1")
 	add_files("src/easy/1_two_sum_test.cpp")
 target_end()
 
+-- 42. Trapping Rain Water
+target("42")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/hard/42_trapping_rain_water_test.cpp")
+target_end()
+
 -- 70. Climbing Stairs
 target("70")
 	set_kind("binary")
