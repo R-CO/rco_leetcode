@@ -60,6 +60,14 @@ target("110")
 	add_files("src/easy/110_balanced_binary_tree_test.cpp")
 target_end()
 
+-- 113. Path Sum II
+target("113")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/113_path_sum_ii_test.cpp")
+target_end()
+
 -- 134. Gas Station
 target("134")
 	set_kind("binary")
