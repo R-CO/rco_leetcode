@@ -116,6 +116,14 @@ target("347")
 	add_files("src/medium/347_top_k_frequent_elements_test.cpp")
 target_end()
 
+-- 429. N-ary Tree Level Order Traversal
+target("429")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/429_n-ary_tree_level_order_traversal_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
