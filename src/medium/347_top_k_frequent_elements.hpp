@@ -13,7 +13,7 @@ namespace top_k_frequent_elements {
 class Solution {
  public:
   std::vector<int> topKFrequent(std::vector<int> &nums, int k) {
-    if (k == nums.size()) {
+    if (static_cast<size_t>(k) == nums.size()) {
       return nums;
     }
 
