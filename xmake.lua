@@ -76,6 +76,15 @@ target("134")
 	add_files("src/medium/134_gas_station_test.cpp")
 target_end()
 
+-- 143. Reorder List
+target("143")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/143_reorder_list_test.cpp")
+target_end()
+
+
 -- 162. Find Peak Element
 target("162")
 	set_kind("binary")
