@@ -196,3 +196,11 @@ target("1170")
 	add_files("unit_test/unit_test_main.cpp")
 	add_files("src/easy/1170_n_th_tribonacci_number_test.cpp")
 target_end()
+
+-- 1701. Average Waiting Time
+target("1701")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/1701_average_waiting_time_test.cpp")
+target_end()
