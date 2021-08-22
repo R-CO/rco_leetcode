@@ -76,6 +76,14 @@ target("113")
 	add_files("src/medium/113_path_sum_ii_test.cpp")
 target_end()
 
+-- 118. Pascal's Triangle
+target("118")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/118_pascals_triangle_test.cpp")
+target_end()
+
 -- 134. Gas Station
 target("134")
 	set_kind("binary")
