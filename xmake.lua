@@ -125,6 +125,14 @@ target("213")
 	add_files("src/medium/213_house_robber_ii_test.cpp")
 target_end()
 
+-- 238. Product of Array Except Self
+target("238")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/238_product_of_array_except_self_test.cpp")
+target_end()
+
 -- 303. Range Sum Query Immutable
 target("322")
 	set_kind("binary")
