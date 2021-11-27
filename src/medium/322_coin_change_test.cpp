@@ -11,7 +11,7 @@ using namespace coin_change;
 using std::vector;
 
 TEST(CoinChange, test_1) {
-  std::vector coins = {1, 2, 5};
+  std::vector<int> coins = {1, 2, 5};
   constexpr int amount = 11;
 
   Solution solution;
@@ -19,7 +19,7 @@ TEST(CoinChange, test_1) {
 }
 
 TEST(CoinChange, test_2) {
-  std::vector coins = {2};
+  std::vector<int> coins = {2};
   constexpr int amount = 3;
 
   Solution solution;
@@ -27,7 +27,7 @@ TEST(CoinChange, test_2) {
 }
 
 TEST(CoinChange, test_3) {
-  std::vector coins = {1};
+  std::vector<int> coins = {1};
   constexpr int amount = 0;
 
   Solution solution;
