@@ -5,6 +5,8 @@
 #ifndef RCO_LEETCODE_SRC_MEDIUM_238_PRODUCT_OF_ARRAY_EXCEPT_SELF_HPP
 #define RCO_LEETCODE_SRC_MEDIUM_238_PRODUCT_OF_ARRAY_EXCEPT_SELF_HPP
 
+#include <utility>
+
 #include <vector>
 
 namespace product_of_array_except_self {
@@ -14,8 +16,8 @@ class Solution {
     const auto count = nums.size();
     std::vector<int> answer(count, 1);
 
-    auto right_product = calcRightProduct(nums);
-    auto left_product = calcLeftProduct(nums);
+    auto right_product = std::move(calcRightProduct(nums));
+    auto left_product = std::move(calcLeftProduct(nums));
 
     for (auto i = 0ul; i < count; ++i) {
       answer[i] = right_product[i] * left_product[i];
