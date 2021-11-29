@@ -42,7 +42,7 @@ class Solution {
     const auto count = nums.size();
     std::vector<int> left_product(count, 1);
 
-    for (int i = 1; i < count; ++i) {
+    for (size_t i = 1; i < count; ++i) {
       left_product[i] = left_product[i - 1] * nums[i - 1];
     }
 
