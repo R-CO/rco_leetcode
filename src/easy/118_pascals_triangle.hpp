@@ -20,7 +20,7 @@ class Solution {
       return output;
     }
 
-    for (size_t i = 2; i < numRows; ++i) {
+    for (size_t i = 2; i < static_cast<size_t>(numRows); ++i) {
       output.push_back(std::vector<int>(i + 1, 1));
       for (size_t j = 1; j < i; ++j) {
         output[i][j] = output[i - 1][j - 1] + output[i - 1][j];
