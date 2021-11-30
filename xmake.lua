@@ -117,6 +117,14 @@ target("198")
 	add_files("src/medium/198_house_robber_test.cpp")
 target_end()
 
+-- 202. Happy Number
+target("202")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/202_happy_number_test.cpp")
+target_end()
+
 -- 213. House Robber II
 target("213")
 	set_kind("binary")
