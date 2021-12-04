@@ -268,3 +268,11 @@ target("1701")
 	add_files("unit_test/unit_test_main.cpp")
 	add_files("src/medium/1701_average_waiting_time_test.cpp")
 target_end()
+
+-- 2085. Count Common Words With One Occurrence
+target("2085")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/2085_count_common_words_with_one_occurrence_test.cpp")
+target_end()
