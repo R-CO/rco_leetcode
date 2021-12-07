@@ -253,6 +253,14 @@ target("1170")
 	add_files("src/easy/1170_n_th_tribonacci_number_test.cpp")
 target_end()
 
+-- 1290. Convert Binary Number in a Linked List to Integer
+target("1290")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/1290_convert_binary_number_in_a_linked_list_to_integer_test.cpp")
+target_end()
+
 -- 1448. Count Good Nodes in Binary Tree
 target("1448")
 	set_kind("binary")
