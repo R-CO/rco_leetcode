@@ -92,6 +92,14 @@ target("134")
 	add_files("src/medium/134_gas_station_test.cpp")
 target_end()
 
+-- 136. Single Number
+target("136")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/136_single_number_test.cpp")
+target_end()
+
 -- 143. Reorder List
 target("143")
 	set_kind("binary")
