@@ -11,19 +11,9 @@ namespace single_number {
 class Solution {
  public:
   int singleNumber(std::vector<int>& nums) {
-    constexpr int offset = 30000;
-    int count_array[offset * 2 + 1] = {0};
-
-    for (auto number : nums) {
-      ++count_array[number + offset];
-    }
-
     int result = 0;
     for (auto number : nums) {
-      if (count_array[number + offset] & 0x1) {
-        result = number;
-        break;
-      }
+      result ^= number;
     }
 
     return result;

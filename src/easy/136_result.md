@@ -4,5 +4,5 @@
 
 ## Details
 
-Runtime: 8 ms, faster than 99.79% of C++ online submissions for Single Number.
-Memory Usage: 17.1 MB, less than 19.60% of C++ online submissions for Single Number.
+Runtime: 16 ms, faster than 86.07% of C++ online submissions for Single Number.
+Memory Usage: 16.9 MB, less than 84.38% of C++ online submissions for Single Number.
