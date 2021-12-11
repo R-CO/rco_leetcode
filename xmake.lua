@@ -221,6 +221,14 @@ target("677")
 	add_files("src/medium/677_map_sum_pairs_test.cpp")
 target_end()
 
+-- 709. To Lower Case
+target("709")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/709_to_lower_case_test.cpp")
+target_end()
+
 -- 746. Min Cost Climbing Stairs
 target("746")
 	set_kind("binary")
