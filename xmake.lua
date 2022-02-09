@@ -197,6 +197,14 @@ target("429")
 	add_files("src/medium/429_n-ary_tree_level_order_traversal_test.cpp")
 target_end()
 
+-- 476. Number Complement
+target("476")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/476_number_complement_test.cpp")
+target_end()
+
 -- 509. Finbonacci Number
 target("509")
 	set_kind("binary")
@@ -291,6 +299,14 @@ target("1701")
 
 	add_files("unit_test/unit_test_main.cpp")
 	add_files("src/medium/1701_average_waiting_time_test.cpp")
+target_end()
+
+-- 1929. Concatenation of Array
+target("1929")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/1929_concatenation_of_array_test.cpp")
 target_end()
 
 -- 2085. Count Common Words With One Occurrence
