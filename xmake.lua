@@ -197,12 +197,12 @@ target("429")
 	add_files("src/medium/429_n-ary_tree_level_order_traversal_test.cpp")
 target_end()
 
--- 476. Number Complement
-target("476")
+-- 461. Hamming Distance
+target("461")
 	set_kind("binary")
 
 	add_files("unit_test/unit_test_main.cpp")
-	add_files("src/easy/476_number_complement_test.cpp")
+	add_files("src/easy/461_hamming_distance_test.cpp")
 target_end()
 
 -- 509. Finbonacci Number
