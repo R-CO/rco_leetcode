@@ -285,6 +285,14 @@ target("1290")
 	add_files("src/easy/1290_convert_binary_number_in_a_linked_list_to_integer_test.cpp")
 target_end()
 
+-- 1365. How Many Numbers Are Smaller Than the Current Number
+target("1365")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/easy/1365_how_many_numbers_are_smaller_than_the_current_number_test.cpp")
+target_end()
+
 -- 1448. Count Good Nodes in Binary Tree
 target("1448")
 	set_kind("binary")
@@ -306,7 +314,7 @@ target("1929")
 	set_kind("binary")
 
 	add_files("unit_test/unit_test_main.cpp")
-	add_files("src/medium/1929_concatenation_of_array_test.cpp")
+	add_files("src/easy/1929_concatenation_of_array_test.cpp")
 target_end()
 
 -- 2085. Count Common Words With One Occurrence
