@@ -8,6 +8,8 @@
 #include <unordered_map>
 #include <vector>
 
+namespace two_sum {
+
 class Solution {
  public:
   std::vector<int> twoSum(std::vector<int>& nums, int target) {
@@ -24,5 +26,7 @@ class Solution {
     return {};
   }
 };
+
+} // end of namespace two_sum
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_1_TWO_SUM_HPP

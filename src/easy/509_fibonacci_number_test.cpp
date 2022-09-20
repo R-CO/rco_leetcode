@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "509_fibonacci_number.hpp"
+using namespace fibonacci_number;
 
 #include <gtest/gtest.h>
 

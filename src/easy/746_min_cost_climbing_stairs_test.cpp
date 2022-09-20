@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "746_min_cost_climbing_stairs.hpp"
+using namespace min_cost_climbing_stairs;
 
 #include <gtest/gtest.h>
 

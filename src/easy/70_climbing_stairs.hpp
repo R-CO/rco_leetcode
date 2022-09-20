@@ -7,6 +7,7 @@
 
 #include <array>
 
+namespace climbing_stairs {
 class Solution {
  public:
   int climbStairs(int n) {
@@ -25,5 +26,7 @@ class Solution {
 
   static constexpr int kMaxStairs = 45;
 };
+
+} // end of namespace climbing_stairs
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_70_CLIMBING_STAIRS_HPP

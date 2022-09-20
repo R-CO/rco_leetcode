@@ -3,6 +3,7 @@
  * E-mail: daniel1820kobe@gmail.com
  **/
 #include "110_balanced_binary_tree.hpp"
+using namespace balanced_binary_tree;
 
 #include <gtest/gtest.h>
 

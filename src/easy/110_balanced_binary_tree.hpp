@@ -9,6 +9,8 @@
 #include <cmath>
 #include <vector>
 
+namespace balanced_binary_tree {
+
 // Definition for a binary tree node.
 struct TreeNode {
   int val;
@@ -54,5 +56,7 @@ class Solution {
     return std::max<int>(height_of_sub_tree_left, height_of_sub_tree_right);
   }
 };
+
+} // end of namespace balanced_binary_tree
 
 #endif  // end of define RCO_LEETCODE_SRC_EASY_110_BALANCED_BINARY_TREE_HPP
