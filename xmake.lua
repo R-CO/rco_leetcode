@@ -60,6 +60,14 @@ target("70")
 	add_files("src/easy/70_climbing_stairs_test.cpp")
 target_end()
 
+-- 80. Remove Duplicates from Sorted Array II
+target("80")
+	set_kind("binary")
+
+	add_files("unit_test/unit_test_main.cpp")
+	add_files("src/medium/80_remove_duplicates_from_sorted_array_ii_test.cpp")
+target_end()
+
 -- 110. Balanced Binary Tree
 target("110")
 	set_kind("binary")
